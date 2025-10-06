@@ -3,40 +3,30 @@ cask "onekeymap-cli" do
   name "onekeymap-cli"
   desc "Universal keymap configuration tool for VSCode, Zed, IntelliJ and more"
   homepage "https://github.com/xinnjie/homebrew-onekeymap"
-  version "0.1.0"
+  version "0.1.1"
 
   livecheck do
     skip "Auto-generated on release."
   end
 
   binary "onekeymap-cli"
+  bash_completion "completions/onekeymap-cli.bash"
+  zsh_completion "completions/onekeymap-cli.zsh"
+  fish_completion "completions/onekeymap-cli.fish"
 
   on_macos do
-    on_intel do
-      url "https://github.com/xinnjie/watchbeats/releases/download/v#{version}/watchbeats_Darwin_x86_64.tar.gz"
-      sha256 "0f15d5c3934bfb1260a6eb78538ef974688eb55836c62f4cce055d1bcd5be18b"
-    end
-    on_arm do
-      url "https://github.com/xinnjie/watchbeats/releases/download/v#{version}/watchbeats_Darwin_arm64.tar.gz"
-      sha256 "dac33a6077cb85af363b50f667f8d91f62430005c036fabe4ce109cbb34d6c36"
-    end
+    url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Darwin_all.tar.gz"
+    sha256 "9eff01263511f0531b1e462bbe9a897e86959b2147b4ebe0c49d69f2d853c4d5"
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/xinnjie/watchbeats/releases/download/v#{version}/watchbeats_Linux_x86_64.tar.gz"
-      sha256 "89ff0941cfb95cc8c2205e408846084998081930cb92dacf95f62842b90c189a"
+      url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Linux_x86_64.tar.gz"
+      sha256 "ef50bcbbdd2459b4cb25d923663ecc9df5ecc1e0082d78b69a071f206186f491"
     end
     on_arm do
-      url "https://github.com/xinnjie/watchbeats/releases/download/v#{version}/watchbeats_Linux_arm64.tar.gz"
-      sha256 "4f6cd7533a14b3c716a5314f68c6a5d4da01ef2fc1cc358308c27b7a7ca918e3"
-    end
-  end
-
-  postflight do
-    if OS.mac?
-      system_command "/usr/bin/xattr",
-        args: ["-dr", "com.apple.quarantine", "#{staged_path}/onekeymap"]
+      url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Linux_arm64.tar.gz"
+      sha256 "eb7f161cbd14a096f313b4fe5c0c883c5edbc22b80786f91eec90b58590a4c5f"
     end
   end
 
