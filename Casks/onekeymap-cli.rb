@@ -16,17 +16,17 @@ cask "onekeymap-cli" do
 
   on_macos do
     url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Darwin_all.tar.gz"
-    sha256 "60f5791a39339126f20202bf3fe8c1178cde5e0346c8a336ba760f258b6846fc"
+    sha256 "4d8c85e5559328ad67044a81841d73dec68df8086ceb98d0491612be9d53a51a"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Linux_x86_64.tar.gz"
-      sha256 "61c9081ea828ac5bba3ea2c28b354316849e5891fad9ce59cda3f9e1aafb5543"
+      sha256 "65ef009e8d1179a4406689708c82964db28598f7378a14a9f088c7e95fc59c03"
     end
     on_arm do
       url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Linux_arm64.tar.gz"
-      sha256 "ffbf79baf3fae451328193d122bc974859804368823217238d150954628896ad"
+      sha256 "0e98e5078548bd42b0590f9cc03b61d02d9b40ad4671ca8650921596034e8bf8"
     end
   end
 
