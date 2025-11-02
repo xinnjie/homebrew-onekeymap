@@ -3,7 +3,7 @@ cask "onekeymap-cli" do
   name "onekeymap-cli"
   desc "Universal keymap configuration tool for VSCode, Zed, IntelliJ and more"
   homepage "https://github.com/xinnjie/homebrew-onekeymap"
-  version "0.5.1"
+  version "0.5.2"
 
   livecheck do
     skip "Auto-generated on release."
@@ -16,17 +16,17 @@ cask "onekeymap-cli" do
 
   on_macos do
     url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Darwin_all.tar.gz"
-    sha256 "fac4ab850e5fabf7c533eb23a76ddc7d3b7c21dc1b1af697c44ebd9e25082e0c"
+    sha256 "9d0dd3681e6afdb3afc050fa70a3e82758844418491b3cb830279f62542b012e"
   end
 
   on_linux do
     on_intel do
       url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Linux_x86_64.tar.gz"
-      sha256 "c9660574149bba4ed897c7bb44e00fa9008e169496130c078307892cd41f4813"
+      sha256 "f516c31a138921185c0f4529d2287fb8ad0171a2993b5f94e202475ab37af3f2"
     end
     on_arm do
       url "https://github.com/xinnjie/onekeymap-cli/releases/download/v#{version}/onekeymap-cli_Linux_arm64.tar.gz"
-      sha256 "eebf7504062d5041f8e2812832f8393580c3fefe66ef3e9397f470d07c312724"
+      sha256 "4e0ad2dd501f019cad1dff8c779a5fd63fdce1ad495f9bfb3c3bdb2c941ffa46"
     end
   end
 
